@@ -16,14 +16,12 @@ namespace utils
       return std::string(it, s.end());
     }
 
-
     std::string rstrip(const std::string& s)
     {
       static const std::function<int (int)> spacep = std::ptr_fun<int, int>(std::isspace);
       const std::string::const_reverse_iterator it = std::find_if_not(s.rbegin(), s.rend(), spacep);
       return std::string(s.begin(), it.base());
     }
-
 
     std::string strip(const std::string& s)
     {
