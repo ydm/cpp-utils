@@ -1,6 +1,10 @@
 #ifndef __UTILS_STR_HPP__
 #define __UTILS_STR_HPP__
 
+#include <cctype>
+#include <functional>
+#include <string>
+
 namespace utils
 {
   namespace str
