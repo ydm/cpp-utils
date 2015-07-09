@@ -1,7 +1,7 @@
 #ifndef __UTILS_FILE_HPP__
 #define __UTILS_FILE_HPP__
 
-#include <fstring>
+#include <fstream>
 #include <string>
 
 
@@ -16,7 +16,7 @@ namespace utils
       if (s)
         {
           return std::string(std::istreambuf_iterator<char>(s),
-                             std::istreambuf_iterator());
+                             std::istreambuf_iterator<char>());
         }
       else
         {
