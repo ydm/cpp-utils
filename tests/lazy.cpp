@@ -60,4 +60,9 @@ TEST_CASE("Lazy evaulation", "[lazy]")
         REQUIRE(t->value  == t().value);
         REQUIRE(t.pointer() != nullptr);
     }
+
+    SECTION("destroying an unevaluated object should be OK")
+    {
+	    REQUIRE(t.pointer() == nullptr);
+    }
 }
