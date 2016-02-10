@@ -7,23 +7,25 @@
 
 namespace utils
 {
-  namespace file
-  {
-    // ydm TODO: Specify encoding!
-    std::string read(const std::string& filename)
+namespace file
+{
+
+// ydm TODO: Handle encodings?
+std::string read(const std::string& filename)
+{
+    std::ifstream s(filename);
+    if (s)
     {
-      std::ifstream s(filename);
-      if (s)
-        {
-          return std::string(std::istreambuf_iterator<char>(s),
-                             std::istreambuf_iterator<char>());
-        }
-      else
-        {
-          return "";
-        }
+        return std::string(std::istreambuf_iterator<char>(s),
+                           std::istreambuf_iterator<char>());
     }
-  } // file
-} // utils
+    else
+    {
+        return "";
+    }
+}
+
+} // namespace file
+} // namespace utils
 
 #endif // __UTILS_FILE_HPP__
