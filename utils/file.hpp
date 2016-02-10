@@ -5,10 +5,8 @@
 #include <string>
 
 
-namespace utils
-{
-namespace file
-{
+namespace utils {
+namespace file {
 
 // ydm TODO: Handle encodings?
 std::string read(const std::string& filename)

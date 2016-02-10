@@ -8,10 +8,8 @@
 #include <string>
 
 
-namespace utils
-{
-namespace str
-{
+namespace utils {
+namespace str {
 
 std::string join(const std::string& glue, std::initializer_list<const std::string> strings)
 {
